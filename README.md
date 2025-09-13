@@ -38,7 +38,7 @@ Durant ce projet, j'ai acquis des compétences fondamentales en développement w
 Je prévois d’ajouter des fonctionnalités interactives pour apprendre progressivement le **JavaScript** :
 
 -  **Bouton FR/EN** : basculer entre version française et anglaise (preuve que je comprends les besoins des utilisateurs locaux *et* globaux).
--  **Mode sombre / clair** : améliorer la lisibilité selon la luminosité.
+-  **Mode sombre / clair** : améliorer la lisibilité selon la luminosité ✅
 -  **Sauvegarde des préférences** : utiliser `localStorage` pour se souvenir du choix de l’utilisateur.
 
 > Ces améliorations me permettront de passer du **statique au dynamique**, un grand pas vers le développement web complet.
