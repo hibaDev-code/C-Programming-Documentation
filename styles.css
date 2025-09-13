@@ -12,8 +12,31 @@
     --border-color:#bdc3c7;
     --navbar-hover:#445364;
     --shadow-hover:black;
+    --base-variant:#e8e9ed;
+    --primary-color:#3a435d;
   }
-  
+  .dark-mode{
+    --navbar-color:#1a2733;
+    --body-bg-color:#1e2a38;
+    --doc-color:#bdc1c5;
+    --navbar-header:rgb(233, 233, 233);
+    --border-color:#b4b9bd;
+    --navbar-hover:#2c3e50;
+    --shadow-hover:rgba(0, 0, 0, 0.6);
+    --base-variant:#101425;
+    --primary-color:#3a435d;
+  }  
+  .icon {
+    vertical-align: middle;
+  }
+
+  .dark-theme .icon-light {
+    display: inline-block;
+  }
+
+  .dark-theme .icon-dark {
+    display: none;
+  }
   body {
     font-family:Tahoma, sans-serif;
     display: flex;

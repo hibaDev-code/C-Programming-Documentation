@@ -4,31 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>C Programming Documentation</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="test.css">
 </head>
 <body>
   <!-- Navigation Bar -->
   <nav id="navbar">
-     <button  id="theme-toggle" aria-label="Toggle Dark Mode">
-       <img src="dark_mode_24dp_1F1F1F_FILL1_wght400_GRAD0_opsz24.svg" alt="Dark Mode" class="icon icon-dark">
-       <img src="light_mode_24dp_1F1F1F_FILL1_wght400_GRAD0_opsz24.svg" alt="icon" alt="Light Mode" class="icon icon-light">
-     </button>
+    <button id="theme-toggle" aria-label="Toggle Dark Mode">
+      <img src="https://img.icons8.com/ios-filled/24/FFFFFF/moon.png" alt="Dark Mode" class="icon icon-dark">
+      <img src="https://img.icons8.com/ios-filled/24/000000/sun.png" alt="Light Mode" class="icon icon-light">
+    </button>
     <header>
       <div>C Language Guide</div>
     </header>
     <ul>
       <li><a href="#Introduction_to_C" class="nav-link">Introduction to C</a></li>
-    <li><a href="#Data_Types_and_Variables" class="nav-link">Data Types and Variables</a></li>
-    <li><a href="#Control_Structures" class="nav-link">Control Structures</a></li>
-    <li><a href="#Functions" class="nav-link">Functions</a></li>
-    <li><a href="#Pointers" class="nav-link">Pointers</a></li>
-    <li><a href="#Memory_Management" class="nav-link">Memory Management</a></li>
+      <li><a href="#Data_Types_and_Variables" class="nav-link">Data Types and Variables</a></li>
+      <li><a href="#Control_Structures" class="nav-link">Control Structures</a></li>
+      <li><a href="#Functions" class="nav-link">Functions</a></li>
+      <li><a href="#Pointers" class="nav-link">Pointers</a></li>
+      <li><a href="#Memory_Management" class="nav-link">Memory Management</a></li>
     </ul>
   </nav>
 
   <!-- Main Documentation Content -->
   <main id="main-doc">
-    <!-- Section 1 -->
     <section class="main-section" id="Introduction_to_C">
       <header>Introduction to C</header>
       <p>The C programming language was developed in the early 1970s by Dennis Ritchie at Bell Labs. It was originally designed for writing the Unix operating system, but its efficiency and portability made it one of the most influential programming languages in history.</p>
@@ -40,7 +39,6 @@
       <code>}</code>
     </section>
 
-    <!-- Section 2 -->
     <section class="main-section" id="Data_Types_and_Variables">
       <header>Data Types and Variables</header>
       <p>C supports several built-in data types including <code>int</code>, <code>float</code>, <code>double</code>, <code>char</code>, and <code>_Bool</code>. These types define the kind of data a variable can hold and how much memory it occupies.</p>
@@ -55,7 +53,6 @@
       </ul>
     </section>
 
-    <!-- Section 3 -->
     <section class="main-section" id="Control_Structures">
       <header>Control Structures</header>
       <p>C provides standard control-flow constructs such as conditionals and loops. These allow programs to make decisions and repeat actions.</p>
@@ -71,7 +68,6 @@
       </ul>
     </section>
 
-    <!-- Section 4 -->
     <section class="main-section" id="Functions">
       <header>Functions</header>
       <p>Functions in C are blocks of code that perform a specific task. Every C program must have a <code>main()</code> function, which serves as the entry point.</p>
@@ -82,7 +78,6 @@
       <p>To use a function, it must be declared (or defined) before it is called. Function prototypes are often placed at the top of the file.</p>
     </section>
 
-    <!-- Section 5 -->
     <section class="main-section" id="Pointers">
       <header>Pointers</header>
       <p>One of C's most powerful features is the pointer—a variable that stores the memory address of another variable.</p>
@@ -96,7 +91,6 @@
       </ul>
     </section>
 
-    <!-- Section 6 -->
     <section class="main-section" id="Memory_Management">
       <header>Memory Management</header>
       <p>Unlike languages with garbage collection, C requires manual memory management using functions from <code><stdlib.h></code>.</p>
@@ -109,5 +103,34 @@
       <p>Proper memory management is crucial in C programming to ensure stability and efficiency.</p>
     </section>
   </main>
+
+  <script>
+    const themeToggle = document.getElementById("theme-toggle");
+    const body = document.documentElement;
+
+    // Check saved theme
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      body.classList.add("dark-theme");
+    }
+
+    function updateIcons() {
+      const isDark = body.classList.contains("dark-theme");
+      document.querySelector(".icon-dark").style.display = isDark ? "none" : "inline-block";
+      document.querySelector(".icon-light").style.display = isDark ? "inline-block" : "none";
+    }
+    updateIcons();
+
+    themeToggle.addEventListener("click", () => {
+      body.classList.toggle("dark-theme");
+
+      if (body.classList.contains("dark-theme")) {
+        localStorage.setItem("theme", "dark");
+      } else {
+        localStorage.setItem("theme", "light");
+      }
+      updateIcons();
+    });
+  </script>
 </body>
 </html>
