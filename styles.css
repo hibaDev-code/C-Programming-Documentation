@@ -26,10 +26,16 @@
     --base-variant:#101425;
     --primary-color:#3a435d;
   }  
+
   .icon {
     vertical-align: middle;
   }
-
+  .icon-light, .icon-dark{
+    display:none;
+  }
+  .icon-dark {
+    display: inline-block;
+  } 
   .dark-theme .icon-light {
     display: inline-block;
   }
